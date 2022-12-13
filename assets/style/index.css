@@ -1,0 +1,86 @@
+@import "./reset.css";
+
+:root {
+  --app-dark:          #15151c                   ;
+  --app-footer-dark:   #222222                   ;
+  --app-footer-border: #f0f2f444                 ;
+  --app-light:         #f0f2f4                   ;
+  --app-footer-light:  #dae2e5                   ;
+  --app-blue:          #95c2ff                   ;
+  --app-blue-hover:    #5aa0ff                   ;
+  --app-green:         #95ffd2                   ;
+  --app-green-hover:   #6effc1                   ;
+  --app-red:           #ff95c2                   ;
+  --app-red-hover:     #ff6eab                   ;
+  --app-purple:        #9d95ff                   ;
+  --app-purple-hover:  #796eff                   ;
+  --app-orange:        #ffd295                   ;
+  --app-orange-hover:  #ffc16e                   ;
+  --app-yellow:        #f7ff95                   ;
+
+  --app-header-height: 56px                        ;
+  --app-footer-height: 112px                       ;
+  --app-border-radius: 6px                         ;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* General                                         */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  background-color: var(--app-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.overlay .loading {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgb(255 255 255 / 0.8);
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: rotate 1.3s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    rotate: z 0deg;
+  } to {
+    rotate: z 360deg;
+  }
+}
+
+main {
+  min-width: 100%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  background-color: var(--app-dark);
+  display: grid;
+  place-items: center;
+}
+
+.map .point {
+  position: relative;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: #007afc;
+  display: none;
+  justify-content: center;
+}
